@@ -23,18 +23,18 @@
     </TabStrip>
 
     <TabContentItem>
-        <Frame defaultPage="home/home-items-page" />
+        <Frame defaultPage="schedule/schedule-items-page" />
     </TabContentItem>
 
     <TabContentItem>
-        <Frame defaultPage="browse/browse-page" />
+        <Frame defaultPage="Speakers/Speakers-page" />
     </TabContentItem>
 
     <TabContentItem>
-        <Frame defaultPage="search/search-page" />
+        <Frame defaultPage="Map/Map-page" />
     </TabContentItem>
 
         <TabContentItem>
-        <Frame defaultPage="search/search-page" />
+        <Frame defaultPage="Information/information-page" />
     </TabContentItem>
 </BottomNavigation>

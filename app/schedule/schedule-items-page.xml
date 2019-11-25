@@ -6,7 +6,7 @@
         <Label text="Home"></Label>
     </ActionBar>
 
-    <ListView items="{{ items }}" itemTap="onItemTap">
+    <ListView items="{{ items }}" itemTap="">
         <ListView.itemTemplate>
             <StackLayout orientation="horizontal">
                 <Label text="{{ name }}" textWrap="true"></Label>
