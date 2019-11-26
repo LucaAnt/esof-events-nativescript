@@ -1,4 +1,15 @@
 
+$scheduleColor:  #3880ff;
 ActionBar.schedule{
-    background-color: #3880ff;
+    background-color: $scheduleColor;
 }
+.schedule-item{
+    border-color: rgb(40, 189, 209);
+    border-left-width: 3px;
+    // class = "bordet-list sub
+    &.sub{
+        color:rgba(0,0,0,0.4);
+    }
+    
+}
+
