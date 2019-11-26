@@ -2,14 +2,15 @@
     navigatingTo="onNavigatingTo"  
     xmlns="http://schemas.nativescript.org/tns.xsd">
 
-    <ActionBar>
+    <ActionBar class="schedule">
         <Label text="Home"></Label>
     </ActionBar>
 
     <ListView items="{{ items }}" itemTap="">
         <ListView.itemTemplate>
-            <StackLayout orientation="horizontal">
+            <StackLayout orientation="vertical">
                 <Label text="{{ name }}" textWrap="true"></Label>
+                <Label text="{{ xxx || '8:00-9:00 : Caffé degli specchi'}}" textWrap="true"></Label>
             </StackLayout>
         </ListView.itemTemplate>
     </ListView>
