@@ -3,13 +3,28 @@ $scheduleColor:  #3880ff;
 ActionBar.schedule{
     background-color: $scheduleColor;
 }
+
+
 .schedule-item{
     border-color: rgb(40, 189, 209);
     border-left-width: 3px;
+    background-color: white;
     // class = "bordet-list sub
     &.sub{
         color:rgba(0,0,0,0.4);
     }
+
+    &.separator{
+        border-color: rgba(0, 0, 0,0.2);
+        border-bottom-width: 3px;
+        border-left-width: 0px;
+        height: 10px;
+        width: 100%;
+    }
+
+    &.margin{
+        width: 5px;
+        background-color: white;
+    }
     
 }
-

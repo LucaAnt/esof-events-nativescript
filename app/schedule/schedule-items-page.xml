@@ -3,17 +3,25 @@
     xmlns:lv="nativescript-ui-listview">
 
     <ActionBar class="schedule">
-        <Label text="Home"></Label>
+        <Label text="Schedule"></Label>
     </ActionBar>
 
         <lv:RadListView items="{{ items }}" row="1"
                     id="myListView"
-                    groupingFunction="{{ myGroupingFunc }}">
+                    groupingFunction="{{ myGroupingFunc }}"
+                    class="item-list">
         <lv:RadListView.itemTemplate>
+
+        <StackLayout orientation="horizontal" class="entry">
+        <Label class="schedule-item margin"/>
             <StackLayout orientation="vertical">
                 <Label class="schedule-item" text="{{ nome }}" textWrap="true" color="black" fontSize="18"></Label>
-                <Label class="schedule-item sub" text="{{ xxx || '8:00-9:00 : Caffé degli specchi'}}" textWrap="true"></Label>
+                <Label class="schedule-item sub" fontSize="12" text="{{ xxx || '8:00-9:00 : Caffé degli specchi'}}" textWrap="true"></Label>
+                <Label class="schedule-item separator" text="" color="black" fontSize="18"></Label>
             </StackLayout>
+        </StackLayout>
+
+
         </lv:RadListView.itemTemplate>
     </lv:RadListView>
 
