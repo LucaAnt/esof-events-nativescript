@@ -1,13 +1,26 @@
 <Page
+class="page-speakers"
     navigatingTo="onNavigatingTo"  
     xmlns="http://schemas.nativescript.org/tns.xsd">
 
-    <ActionBar backgroundColor="#0cd1e8">
-        <Label text="Browse"></Label>
+    <ActionBar class="speakers">
+        <Label text="Speakers"></Label>
     </ActionBar>
 
-    <GridLayout class="page__content">
-        <Label class="page__content-icon far" text="&#xf500;"></Label>
-        <Label class="page__content-placeholder" text="<!-- Browse page content goes here -->"></Label>
-    </GridLayout>
+        <ListView items="{{ itemsSpeakers }}">
+            <ListView.itemTemplate>
+                <StackLayout class="cardView" orientation="vertical">
+                    <StackLayout class="header" orientation="horizontal">
+                        <Image class="avatar" src="{{img}}" stretch="aspectFill" />
+                        <Label class="" text="{{ nome || 'Nome Cognome' }}" textWrap="true"/>
+                    </StackLayout>
+                    <StackLayout class="content" orientation="vertical">
+                        <Label class="" text="{{ interventocompleto || 'Intervento: 8:00 - 9:00' }}" textWrap="true"/>
+                        <StackLayout class="separator" height="2" marginTop="5" marginBottom="5"  backgroundColor="#bdbdbd"/>
+                        <Label class="" text="{{ desc || 'Descrizione' }}" textWrap="true" />
+                        <StackLayout class="separator" height="2" marginTop="5" marginBottom="5"  backgroundColor="#bdbdbd"/>
+                </StackLayout>
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
 </Page>

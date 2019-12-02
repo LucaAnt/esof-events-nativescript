@@ -1,8 +1,11 @@
-const BrowseViewModel = require("./Speakers-view-model");
+const SpeakersViewModel = require("./Speakers-view-model");
 
 function onNavigatingTo(args) {
     const component = args.object;
-    component.bindingContext = new BrowseViewModel();
+    component.bindingContext = new SpeakersViewModel();
 }
 
 exports.onNavigatingTo = onNavigatingTo;
+
+exports.onTap = ()=>{alert();};
+
