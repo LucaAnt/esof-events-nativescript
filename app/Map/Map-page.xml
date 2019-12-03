@@ -6,8 +6,12 @@
         <Label text="Search"></Label>
     </ActionBar>
 
-    <GridLayout class="page__content">
+    <StackLayout orienttion="vertical">
         <Label class="page__content-icon fas" text="&#xf279;"></Label>
-        <Label class="page__content-placeholder" text="<!-- Search page content goes here -->"></Label>
-    </GridLayout>
+        <Label class="page__content-placeholder" text="{{nome}}"></Label>
+        <TextField height="80" hint="Enter name" text="{{nome}}" color="orangered" backgroundColor="lightyellow" />
+        <TextField height="80" hint="Enter cognome" text="{{cognome}}" color="orangered" backgroundColor="lightyellow" />
+        <Label class="page__content-placeholder" text="{{nome}}"></Label>
+        <Label class="page__content-placeholder" text="{{cognome}}"></Label>
+    </StackLayout>
 </Page>
