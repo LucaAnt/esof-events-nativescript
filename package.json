@@ -13,12 +13,13 @@
   "repository": "<fill-your-repository-here>",
   "scripts": {
     "lint": "eslint \"app/**/*.js\"",
-    "iphone": "tns debug ios --device \"iPhone8\"",
-    "iphoneX": "tns debug ios --device \"iPhoneX\""
+    "iphone": "tns debug ios --device \"iPhone 8\"",
+    "iphoneX": "tns debug ios --device \"iPhone X\""
   },
   "dependencies": {
     "@nativescript/theme": "~2.2.0",
     "nativescript-google-maps-sdk": "^2.8.1",
+    "nativescript-plugin-firebase-common": "^0.10.11",
     "nativescript-ui-listview": "^8.0.1",
     "tns-core-modules": "~6.2.0"
   },
