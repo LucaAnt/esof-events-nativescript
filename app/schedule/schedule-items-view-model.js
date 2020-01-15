@@ -1,7 +1,6 @@
 const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
 const observableModule = require("tns-core-modules/data/observable");
 const firebase = require("nativescript-plugin-firebase/app");
-const data = [];
 const scheduleCollection = firebase.firestore().collection("schedule");
 const myObservableArray = new ObservableArray();
 
