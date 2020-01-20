@@ -12,6 +12,9 @@ if(application.ios) {
 firebase.init({
   iOSEmulatorFlush: true,//bug simulatore
   persist:false, //Caching
+  onAuthStateChanged:function(data) {
+    console.log(data.loggedIn?"LOGGED":"LOGGED OUT")
+  },
 }).then(
     function () {
       console.log("firebase.init done");
