@@ -4,12 +4,16 @@
 
     <ActionBar class="schedule">
         <Label text="Schedule"></Label>
+        <ActionItem ios.position="right" ios.systemIcon="17" tap="showDialog"></ActionItem>
     </ActionBar>
-
+        
+        <GridLayout visibility="{{ isLoggedIn ? 'visible' : 'collapsed' }}">
+        
         <lv:RadListView items="{{ items }}" row="1"
                     id="myListView"
                     groupingFunction="{{ myGroupingFunc }}"
-                    class="item-list">
+                    class="item-list"
+                    >
         <lv:RadListView.itemTemplate>
 
         <StackLayout orientation="horizontal" class="entry">
@@ -20,9 +24,7 @@
                 <Label class="schedule-item separator" text="" color="black" fontSize="18"></Label>
             </StackLayout>
         </StackLayout>
-
-
         </lv:RadListView.itemTemplate>
     </lv:RadListView>
-
+</GridLayout>
 </Page>
