@@ -5,6 +5,7 @@
     <ActionBar class="schedule">
         <Label text="Schedule"></Label>
         <ActionItem ios.position="right" ios.systemIcon="17" tap="showDialog"></ActionItem>
+        <ActionItem ios.position="left" ios.systemIcon="8" tap="showFunction"></ActionItem>
     </ActionBar>
         
         <GridLayout visibility="{{ isLoggedIn ? 'visible' : 'collapsed' }}">

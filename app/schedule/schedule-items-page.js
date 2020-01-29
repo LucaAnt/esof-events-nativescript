@@ -38,6 +38,8 @@ function onNavigatingTo(args) {
     component.bindingContext = viewModel;
 }
 
+const fn = firebase.functions.httpsCallable('helloNome')
+
 function showDialog() {
     console.log("test")
     dialogs.login({title: "Login ESOF",
@@ -86,5 +88,20 @@ function showDialog() {
     })
 }
 
+function showFunction() {
+    fn('firebase from native script').then(
+        (mydata)=>{alert({
+            title : 'Firebase function test',
+            message : mydata.messaggio,
+            okButtonText : mydata.status
+            }
+        )}
+    ).catch((errorMessage)=>{alert({title:'Errore',
+            message:errorMessage,
+            okButtonText:'ok'
+        })})
+}
+
 exports.onNavigatingTo = onNavigatingTo;
 exports.showDialog = showDialog;
+exports.showFunction = showFunction;
